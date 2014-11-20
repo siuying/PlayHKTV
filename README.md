@@ -13,6 +13,13 @@ Requirement
 
 - OS X 10.10 (Yosemite), should work on 10.9 (Mavericks).
 
+License
+-------
+
+The app is licensed in MIT License. 
+
+This app includes libVLC which is LGPL.
+
 Disclaimer
 ----------
 
