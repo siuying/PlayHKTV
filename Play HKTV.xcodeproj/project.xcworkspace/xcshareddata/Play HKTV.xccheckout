@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ABB00066-3D29-4D8E-AB94-E2727C9F5A66</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Play HKTV</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A4DF7F0BB04862992B714E9D9C081F9190CEBA94</key>
+		<string>github.com:siuying/PlayHKTV.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Play HKTV.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A4DF7F0BB04862992B714E9D9C081F9190CEBA94</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:siuying/PlayHKTV.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A4DF7F0BB04862992B714E9D9C081F9190CEBA94</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A4DF7F0BB04862992B714E9D9C081F9190CEBA94</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Play%20HKTV</string>
+		</dict>
+	</array>
+</dict>
+</plist>

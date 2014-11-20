@@ -464,6 +464,7 @@
 				54A7ABA71A1DCDB70055883E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54A7ABA81A1DCDB70055883E /* Build configuration list for PBXNativeTarget "Play HKTVTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +473,7 @@
 				54A7ABAA1A1DCDB70055883E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
