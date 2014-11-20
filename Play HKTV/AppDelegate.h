@@ -8,8 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "IGHKTVWindow.h"
+#import "IGHKTVClient.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (nonatomic, weak) IBOutlet IGHKTVWindow* window;
+@property (nonatomic, weak) IGHKTVClient* client;
 
 @end
 

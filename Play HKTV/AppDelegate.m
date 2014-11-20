@@ -7,20 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "IGHKTVClient.h"
+#import "IGHKTVWindow.h"
 
 @interface AppDelegate ()
-
-@property (weak) IBOutlet NSWindow *window;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [[IGHKTVClient sharedClient] fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
+        [self.window setPlaylistURL:playlistURL];
+    } failure:^(NSError *error) {
+        NSLog(@"error: %@", error);
+    }];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
 }
 
 @end
