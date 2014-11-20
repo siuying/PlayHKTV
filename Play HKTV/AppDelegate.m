@@ -10,6 +10,8 @@
 #import "IGHKTVClient.h"
 #import "IGHKTVWindow.h"
 
+static NSString* const PlaylistKey = @"playlist";
+
 @interface AppDelegate ()
 @end
 
@@ -18,8 +20,20 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [[IGHKTVClient sharedClient] fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
         [self.window setPlaylistURL:playlistURL];
+        
+        // cache the URL
+        [[NSUserDefaults standardUserDefaults] setObject:playlistURL.absoluteString forKey:PlaylistKey];
+
     } failure:^(NSError *error) {
-        NSLog(@"error: %@", error);
+        // if we failed to retrieve the playlist...
+        NSLog(@"failed to get token: %@", error);
+        NSString* playlistURLString = [[NSUserDefaults standardUserDefaults] objectForKey:PlaylistKey];
+        if (playlistURLString) {
+            NSLog(@"use cached url: %@", playlistURLString);
+            [self.window setPlaylistURL:[NSURL URLWithString:playlistURLString]];
+        } else {
+            [[NSAlert alertWithError:error] runModal];
+        }
     }];
 }
 
