@@ -20,7 +20,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
 
-    self.client = [[IGHKTVClient alloc] initWithUUID:[[NSUUID UUID] UUIDString]];
+    self.client = [[IGHKTVClient alloc] initWithUUID:settings.UUIDString];
     [self.client fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
         [self.window setPlaylistURL:playlistURL];
         
