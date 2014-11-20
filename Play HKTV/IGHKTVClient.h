@@ -11,7 +11,9 @@
 
 @interface IGHKTVClient : NSObject
 
-+(instancetype) sharedClient;
+@property (nonatomic, strong) NSString* UUIDString;
+
+-(instancetype) initWithUUID:(NSString*)UUIDString;
 
 -(void) fetchPlaylistWithSuccess:(void(^)(NSURL* playlistURL))success
                          failure:(void(^)(NSError* error))failure;

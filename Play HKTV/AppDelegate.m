@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "IGHKTVClient.h"
-#import "IGHKTVWindow.h"
 
-static NSString* const PlaylistKey = @"playlist";
+#import "IGHKTVClient.h"
+#import "IGVideoWindow.h"
+#import "NSUserDefaults+IGSettings.h"
 
 @interface AppDelegate ()
 @end
@@ -18,19 +18,22 @@ static NSString* const PlaylistKey = @"playlist";
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [[IGHKTVClient sharedClient] fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
+    NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
+
+    self.client = [[IGHKTVClient alloc] initWithUUID:[[NSUUID UUID] UUIDString]];
+    [self.client fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
         [self.window setPlaylistURL:playlistURL];
         
         // cache the URL
-        [[NSUserDefaults standardUserDefaults] setObject:playlistURL.absoluteString forKey:PlaylistKey];
+        [settings setLastPlaylistURL:playlistURL];
 
     } failure:^(NSError *error) {
         // if we failed to retrieve the playlist...
         NSLog(@"failed to get token: %@", error);
-        NSString* playlistURLString = [[NSUserDefaults standardUserDefaults] objectForKey:PlaylistKey];
-        if (playlistURLString) {
-            NSLog(@"use cached url: %@", playlistURLString);
-            [self.window setPlaylistURL:[NSURL URLWithString:playlistURLString]];
+        NSURL* playlistURL = [settings lastPlaylistURL];
+        if (playlistURL) {
+            NSLog(@"use cached url: %@", playlistURL);
+            [self.window setPlaylistURL:playlistURL];
         } else {
             [[NSAlert alertWithError:error] runModal];
         }

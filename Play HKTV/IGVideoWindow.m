@@ -6,13 +6,13 @@
 //
 //
 
-#import "IGHKTVWindow.h"
+#import "IGVideoWindow.h"
 
-@interface IGHKTVWindow()
+@interface IGVideoWindow()
 @property (nonatomic, strong) IBOutlet VLCMediaPlayer* player;
 @end
 
-@implementation IGHKTVWindow
+@implementation IGVideoWindow
 
 -(void) awakeFromNib
 {

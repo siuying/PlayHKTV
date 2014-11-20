@@ -8,13 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "IGHKTVWindow.h"
+#import "IGVideoWindow.h"
 #import "IGHKTVClient.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (nonatomic, weak) IBOutlet IGHKTVWindow* window;
-@property (nonatomic, weak) IGHKTVClient* client;
+@property (nonatomic, weak) IBOutlet IGVideoWindow* window;
+@property (nonatomic, strong) IGHKTVClient* client;
 
 @end
 

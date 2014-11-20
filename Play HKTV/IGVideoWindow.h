@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <VLCKit/VLCKit.h>
 
-@interface IGHKTVWindow : NSWindow
+@interface IGVideoWindow : NSWindow
 
 @property (nonatomic, strong) IBOutlet VLCVideoView* videoView;
 

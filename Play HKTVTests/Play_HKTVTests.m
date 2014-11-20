@@ -20,7 +20,7 @@
 - (void)setUp {
     [super setUp];
     
-    client = [[IGHKTVClient alloc] init];
+    client = [[IGHKTVClient alloc] initWithUUID:[[NSUUID UUID] UUIDString]];
 }
 
 - (void)tearDown {

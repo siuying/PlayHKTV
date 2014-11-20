@@ -13,14 +13,11 @@ static NSString* const RequestURL = @"http://ott-www.hktvmall.com/api/playlist/r
 
 @implementation IGHKTVClient
 
-+(instancetype) sharedClient
+-(instancetype) initWithUUID:(NSString*)UUIDString
 {
-    static dispatch_once_t onceToken;
-    static IGHKTVClient* _client;
-    dispatch_once(&onceToken, ^{
-        _client = [[self alloc] init];
-    });
-    return _client;
+    self = [super init];
+    self.UUIDString = UUIDString;
+    return self;
 }
 
 -(void) fetchPlaylistWithSuccess:(void(^)(NSURL* playlistURL))success
@@ -68,7 +65,7 @@ static NSString* const RequestURL = @"http://ott-www.hktvmall.com/api/playlist/r
                         failure:(void(^)(NSError* error))failure
 {
     NSURLSession* session = [NSURLSession sharedSession];
-    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:RequestURL, userId, token, [[NSUUID UUID] UUIDString], @([[NSDate date] timeIntervalSince1970])]]];
+    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:RequestURL, userId, token, self.UUIDString, @([[NSDate date] timeIntervalSince1970])]]];
     NSURLSessionDataTask* task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             failure(error);

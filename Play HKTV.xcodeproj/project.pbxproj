@@ -13,9 +13,10 @@
 		54A7AB961A1DCDB70055883E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7AB941A1DCDB70055883E /* MainMenu.xib */; };
 		54A7ABA21A1DCDB70055883E /* Play_HKTVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7ABA11A1DCDB70055883E /* Play_HKTVTests.m */; };
 		54A7ABB21A1DCE270055883E /* IGHKTVClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7ABB11A1DCE270055883E /* IGHKTVClient.m */; };
-		54A7ABB91A1DD43B0055883E /* IGHKTVWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7ABB81A1DD43B0055883E /* IGHKTVWindow.m */; };
+		54A7ABB91A1DD43B0055883E /* IGVideoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7ABB81A1DD43B0055883E /* IGVideoWindow.m */; };
 		54A7ABBC1A1DD4B50055883E /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A7ABBB1A1DD4B50055883E /* VLCKit.framework */; };
 		54A7ABBD1A1DD4BD0055883E /* VLCKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54A7ABBB1A1DD4B50055883E /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54A7ABC11A1DDDC80055883E /* NSUserDefaults+IGSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7ABC01A1DDDC80055883E /* NSUserDefaults+IGSettings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +55,12 @@
 		54A7ABA11A1DCDB70055883E /* Play_HKTVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Play_HKTVTests.m; sourceTree = "<group>"; };
 		54A7ABB01A1DCE270055883E /* IGHKTVClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGHKTVClient.h; sourceTree = "<group>"; };
 		54A7ABB11A1DCE270055883E /* IGHKTVClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGHKTVClient.m; sourceTree = "<group>"; };
-		54A7ABB71A1DD43B0055883E /* IGHKTVWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGHKTVWindow.h; sourceTree = "<group>"; };
-		54A7ABB81A1DD43B0055883E /* IGHKTVWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGHKTVWindow.m; sourceTree = "<group>"; };
+		54A7ABB71A1DD43B0055883E /* IGVideoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGVideoWindow.h; sourceTree = "<group>"; };
+		54A7ABB81A1DD43B0055883E /* IGVideoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGVideoWindow.m; sourceTree = "<group>"; };
 		54A7ABBB1A1DD4B50055883E /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VLCKit.framework; path = vendor/VLCKit.framework; sourceTree = "<group>"; };
 		54A7ABBE1A1DDABB0055883E /* Play HKTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Play HKTV.entitlements"; sourceTree = "<group>"; };
+		54A7ABBF1A1DDDC80055883E /* NSUserDefaults+IGSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+IGSettings.h"; sourceTree = "<group>"; };
+		54A7ABC01A1DDDC80055883E /* NSUserDefaults+IGSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+IGSettings.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +104,12 @@
 		54A7AB8A1A1DCDB70055883E /* Play HKTV */ = {
 			isa = PBXGroup;
 			children = (
+				54A7ABBF1A1DDDC80055883E /* NSUserDefaults+IGSettings.h */,
+				54A7ABC01A1DDDC80055883E /* NSUserDefaults+IGSettings.m */,
 				54A7ABB01A1DCE270055883E /* IGHKTVClient.h */,
 				54A7ABB11A1DCE270055883E /* IGHKTVClient.m */,
-				54A7ABB71A1DD43B0055883E /* IGHKTVWindow.h */,
-				54A7ABB81A1DD43B0055883E /* IGHKTVWindow.m */,
+				54A7ABB71A1DD43B0055883E /* IGVideoWindow.h */,
+				54A7ABB81A1DD43B0055883E /* IGVideoWindow.m */,
 				54A7AB8D1A1DCDB70055883E /* AppDelegate.h */,
 				54A7AB8E1A1DCDB70055883E /* AppDelegate.m */,
 				54A7AB921A1DCDB70055883E /* Images.xcassets */,
@@ -254,9 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A7ABC11A1DDDC80055883E /* NSUserDefaults+IGSettings.m in Sources */,
 				54A7AB911A1DCDB70055883E /* main.m in Sources */,
 				54A7AB8F1A1DCDB70055883E /* AppDelegate.m in Sources */,
-				54A7ABB91A1DD43B0055883E /* IGHKTVWindow.m in Sources */,
+				54A7ABB91A1DD43B0055883E /* IGVideoWindow.m in Sources */,
 				54A7ABB21A1DCE270055883E /* IGHKTVClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
