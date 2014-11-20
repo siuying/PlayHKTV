@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54A7AB8F1A1DCDB70055883E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7AB8E1A1DCDB70055883E /* AppDelegate.m */; };
+		54A7AB911A1DCDB70055883E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7AB901A1DCDB70055883E /* main.m */; };
+		54A7AB931A1DCDB70055883E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54A7AB921A1DCDB70055883E /* Images.xcassets */; };
+		54A7AB961A1DCDB70055883E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A7AB941A1DCDB70055883E /* MainMenu.xib */; };
+		54A7ABA21A1DCDB70055883E /* Play_HKTVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7ABA11A1DCDB70055883E /* Play_HKTVTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54A7AB9C1A1DCDB70055883E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54A7AB801A1DCDB70055883E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54A7AB871A1DCDB70055883E;
+			remoteInfo = "Play HKTV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54A7AB881A1DCDB70055883E /* Play HKTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play HKTV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A7AB8C1A1DCDB70055883E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54A7AB8D1A1DCDB70055883E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		54A7AB8E1A1DCDB70055883E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		54A7AB901A1DCDB70055883E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		54A7AB921A1DCDB70055883E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		54A7AB951A1DCDB70055883E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		54A7AB9B1A1DCDB70055883E /* Play HKTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Play HKTVTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A7ABA01A1DCDB70055883E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54A7ABA11A1DCDB70055883E /* Play_HKTVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Play_HKTVTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54A7AB851A1DCDB70055883E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A7AB981A1DCDB70055883E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54A7AB7F1A1DCDB70055883E = {
+			isa = PBXGroup;
+			children = (
+				54A7AB8A1A1DCDB70055883E /* Play HKTV */,
+				54A7AB9E1A1DCDB70055883E /* Play HKTVTests */,
+				54A7AB891A1DCDB70055883E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54A7AB891A1DCDB70055883E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54A7AB881A1DCDB70055883E /* Play HKTV.app */,
+				54A7AB9B1A1DCDB70055883E /* Play HKTVTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54A7AB8A1A1DCDB70055883E /* Play HKTV */ = {
+			isa = PBXGroup;
+			children = (
+				54A7AB8D1A1DCDB70055883E /* AppDelegate.h */,
+				54A7AB8E1A1DCDB70055883E /* AppDelegate.m */,
+				54A7AB921A1DCDB70055883E /* Images.xcassets */,
+				54A7AB941A1DCDB70055883E /* MainMenu.xib */,
+				54A7AB8B1A1DCDB70055883E /* Supporting Files */,
+			);
+			path = "Play HKTV";
+			sourceTree = "<group>";
+		};
+		54A7AB8B1A1DCDB70055883E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54A7AB8C1A1DCDB70055883E /* Info.plist */,
+				54A7AB901A1DCDB70055883E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54A7AB9E1A1DCDB70055883E /* Play HKTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				54A7ABA11A1DCDB70055883E /* Play_HKTVTests.m */,
+				54A7AB9F1A1DCDB70055883E /* Supporting Files */,
+			);
+			path = "Play HKTVTests";
+			sourceTree = "<group>";
+		};
+		54A7AB9F1A1DCDB70055883E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54A7ABA01A1DCDB70055883E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54A7AB871A1DCDB70055883E /* Play HKTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54A7ABA51A1DCDB70055883E /* Build configuration list for PBXNativeTarget "Play HKTV" */;
+			buildPhases = (
+				54A7AB841A1DCDB70055883E /* Sources */,
+				54A7AB851A1DCDB70055883E /* Frameworks */,
+				54A7AB861A1DCDB70055883E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Play HKTV";
+			productName = "Play HKTV";
+			productReference = 54A7AB881A1DCDB70055883E /* Play HKTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54A7AB9A1A1DCDB70055883E /* Play HKTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54A7ABA81A1DCDB70055883E /* Build configuration list for PBXNativeTarget "Play HKTVTests" */;
+			buildPhases = (
+				54A7AB971A1DCDB70055883E /* Sources */,
+				54A7AB981A1DCDB70055883E /* Frameworks */,
+				54A7AB991A1DCDB70055883E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54A7AB9D1A1DCDB70055883E /* PBXTargetDependency */,
+			);
+			name = "Play HKTVTests";
+			productName = "Play HKTVTests";
+			productReference = 54A7AB9B1A1DCDB70055883E /* Play HKTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54A7AB801A1DCDB70055883E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					54A7AB871A1DCDB70055883E = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					54A7AB9A1A1DCDB70055883E = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 54A7AB871A1DCDB70055883E;
+					};
+				};
+			};
+			buildConfigurationList = 54A7AB831A1DCDB70055883E /* Build configuration list for PBXProject "Play HKTV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54A7AB7F1A1DCDB70055883E;
+			productRefGroup = 54A7AB891A1DCDB70055883E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54A7AB871A1DCDB70055883E /* Play HKTV */,
+				54A7AB9A1A1DCDB70055883E /* Play HKTVTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54A7AB861A1DCDB70055883E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54A7AB931A1DCDB70055883E /* Images.xcassets in Resources */,
+				54A7AB961A1DCDB70055883E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A7AB991A1DCDB70055883E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54A7AB841A1DCDB70055883E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54A7AB911A1DCDB70055883E /* main.m in Sources */,
+				54A7AB8F1A1DCDB70055883E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A7AB971A1DCDB70055883E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54A7ABA21A1DCDB70055883E /* Play_HKTVTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54A7AB9D1A1DCDB70055883E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54A7AB871A1DCDB70055883E /* Play HKTV */;
+			targetProxy = 54A7AB9C1A1DCDB70055883E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		54A7AB941A1DCDB70055883E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54A7AB951A1DCDB70055883E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54A7ABA31A1DCDB70055883E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		54A7ABA41A1DCDB70055883E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		54A7ABA61A1DCDB70055883E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Play HKTV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		54A7ABA71A1DCDB70055883E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Play HKTV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		54A7ABA91A1DCDB70055883E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Play HKTVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Play HKTV.app/Contents/MacOS/Play HKTV";
+			};
+			name = Debug;
+		};
+		54A7ABAA1A1DCDB70055883E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Play HKTVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Play HKTV.app/Contents/MacOS/Play HKTV";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54A7AB831A1DCDB70055883E /* Build configuration list for PBXProject "Play HKTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54A7ABA31A1DCDB70055883E /* Debug */,
+				54A7ABA41A1DCDB70055883E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54A7ABA51A1DCDB70055883E /* Build configuration list for PBXNativeTarget "Play HKTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54A7ABA61A1DCDB70055883E /* Debug */,
+				54A7ABA71A1DCDB70055883E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		54A7ABA81A1DCDB70055883E /* Build configuration list for PBXNativeTarget "Play HKTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54A7ABA91A1DCDB70055883E /* Debug */,
+				54A7ABAA1A1DCDB70055883E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54A7AB801A1DCDB70055883E /* Project object */;
+}
