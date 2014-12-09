@@ -60,14 +60,12 @@ static NSString* const PlaylistPath = @"playlist/request";
 -(void) fetchTokenWithSuccess:(void(^)(NSString *token, NSString *userId, NSString *userLevel, NSDate *expiry))success
                       failure:(void(^)(NSError* error))failure
 {
-    NSString* ki = @"12";
-    NSString* muid = @"0";
     NSUInteger timestamp = [[NSDate date] timeIntervalSince1970];
     NSString* signature = [self generateSignatureWithPath:TokenPath
                                                 timestamp:timestamp
-                                               parameters:@[ki, muid]];
+                                               parameters:@[APIKi, APIUid]];
     
-    NSDictionary* params = @{@"ki": ki, @"ts": [@(timestamp) description], @"s": signature, @"muid": muid};
+    NSDictionary* params = @{@"ki": APIKi, @"ts": [@(timestamp) description], @"s": signature, @"muid": APIUid};
     NSURLSessionDataTask* task = [self.httpClient POST:[NSString stringWithFormat:@"%@%@", APIRoot, TokenPath] parameters:params success:^(NSURLSessionDataTask *task, NSDictionary* jsonData) {
         if (!jsonData || ![jsonData isKindOfClass:[NSDictionary class]]) {
             failure([NSError errorWithDomain:IGHKTVErrorDomain code:1 userInfo:nil]);
