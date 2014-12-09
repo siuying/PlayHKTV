@@ -6,7 +6,7 @@ Unofficial app to watch HKTV on your Mac.
 How to Install
 --------------
 
-[Download the zip file](https://www.dropbox.com/s/j5uffv7m8uq8a74/Play%20HKTV_1.1.0.zip?dl=0?dl=1), unzip it and drag "Play HKTV" to your Applications folder. 
+[Download the zip file](https://www.dropbox.com/s/j9jsqga89zizsg7/Play%20HKTV_1.1.1.zip?dl=1), unzip it and drag "Play HKTV" to your Applications folder. 
 
 Changes
 -------
