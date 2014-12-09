@@ -11,6 +11,10 @@ How to Install
 Changes
 -------
 
+1.1.1
+
+- Improved error handling.
+
 1.1.0
 
 - Fixes crashes on OS X 10.9
