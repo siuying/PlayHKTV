@@ -10,7 +10,6 @@
 
 static NSString* const PlaylistKey = @"playlist";
 static NSString* const UUIDKey = @"uuid";
-static NSString* const DefaultPlaylistURLString = @"http://ott-video-lb.hktvmall.com:8088/hktvlive.m3u8?uid=1&vid=1&d=pc&t=12e9a7f66f3a892b396e94d81206eb6c&mxres=1920&net=&udid=53FAB2F3-84C2-4BA7-B9A5-85605E0B4EC9&ts=1416472490490&s=4064e0937ef4fd1f61c7bfe5c47601c9";
 
 @implementation NSUserDefaults(IGSettings)
 
@@ -29,7 +28,7 @@ static NSString* const DefaultPlaylistURLString = @"http://ott-video-lb.hktvmall
 {
     NSString* URLString = [self objectForKey:PlaylistKey];
     if (!URLString) {
-        return [NSURL URLWithString:DefaultPlaylistURLString];
+        return nil;
     }
     return [NSURL URLWithString:URLString];
 }
