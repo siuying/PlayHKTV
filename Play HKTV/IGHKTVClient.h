@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 
+extern NSString* const IGHKTVErrorDomain;
+
 @interface IGHKTVClient : NSObject
 
 @property (nonatomic, strong) NSString* UUIDString;
@@ -17,5 +19,8 @@
 
 -(void) fetchPlaylistWithSuccess:(void(^)(NSURL* playlistURL))success
                          failure:(void(^)(NSError* error))failure;
+
+-(void) fetchTokenWithSuccess:(void(^)(NSString *token, NSString *userId, NSString *userLevel, NSDate *expiry))success
+                      failure:(void(^)(NSError* error))failure;
 
 @end

@@ -11,6 +11,10 @@ How to Install
 Changes
 -------
 
+1.1.0
+
+- Revised the API usage, use HD video link.
+
 1.0.2
 
 - Add Cmd+w shortcut

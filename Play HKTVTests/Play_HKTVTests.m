@@ -27,7 +27,7 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testPlaylist {
     XCTestExpectation *apiRequestComplete = [self expectationWithDescription:@"API Request Complete"];
     [client fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
         [apiRequestComplete fulfill];
@@ -36,6 +36,19 @@
     } failure:^(NSError *error) {
         [apiRequestComplete fulfill];
         XCTFail(@"API failed with error: %@", error);
+    }];
+    [self waitForExpectationsWithTimeout:3.0 handler:^(NSError *error) {
+    }];
+}
+
+- (void)testToken {
+    XCTestExpectation *apiRequestComplete = [self expectationWithDescription:@"API Request Complete"];
+    [client fetchTokenWithSuccess:^(NSString *token, NSString *userId, NSString *userLevel, NSDate *expiry){
+        [apiRequestComplete fulfill];
+        XCTAssertNotNil(token);
+    } failure:^(NSError *error) {
+        XCTFail(@"API failed with error: %@", error);
+        [apiRequestComplete fulfill];
     }];
     [self waitForExpectationsWithTimeout:3.0 handler:^(NSError *error) {
     }];
