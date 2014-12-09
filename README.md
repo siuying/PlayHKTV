@@ -3,6 +3,8 @@ Play HKTV
 
 Unofficial app to watch HKTV on your Mac.
 
+Note: This app only work in Hong Kong. If you cannot watch the video on [official HKTV site](http://www.hktvmall.com), you probably cannot use this app to watch HKTV.
+
 How to Install
 --------------
 
