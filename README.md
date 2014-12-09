@@ -13,6 +13,7 @@ Changes
 
 1.1.0
 
+- Fixes crashes on OS X 10.9
 - Revised the API usage, use HD video link.
 
 1.0.2
@@ -23,7 +24,7 @@ Changes
 Requirement
 -----------
 
-- OS X 10.10 (Yosemite), should work on 10.9 (Mavericks).
+- OS X 10.9 (Mavericks) or above.
 
 License
 -------
