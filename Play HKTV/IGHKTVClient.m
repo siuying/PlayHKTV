@@ -68,7 +68,7 @@ static NSString* const PlaylistPath = @"playlist/request";
     NSDictionary* params = @{@"ki": APIKi, @"ts": [@(timestamp) description], @"s": signature, @"muid": APIUid};
     NSURLSessionDataTask* task = [self.httpClient POST:[NSString stringWithFormat:@"%@%@", APIRoot, TokenPath] parameters:params success:^(NSURLSessionDataTask *task, NSDictionary* jsonData) {
         if (!jsonData || ![jsonData isKindOfClass:[NSDictionary class]]) {
-            failure([NSError errorWithDomain:IGHKTVErrorDomain code:1 userInfo:nil]);
+            failure([NSError errorWithDomain:IGHKTVErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey: @"Unexpected data returned from HKTV."}]);
             return;
         }
         
@@ -77,6 +77,11 @@ static NSString* const PlaylistPath = @"playlist/request";
         NSString* userLevel = jsonData[@"user_level"];
         NSNumber* expiryDateTimestamp = jsonData[@"expiry_date"];
         NSDate* expiryDate = [NSDate dateWithTimeIntervalSince1970:expiryDateTimestamp.doubleValue];
+        if (!token || !userId || !userLevel || !expiryDateTimestamp) {
+            failure([NSError errorWithDomain:IGHKTVErrorDomain code:2 userInfo:@{NSLocalizedDescriptionKey: @"Cannot authenticate with HKTV."}]);
+            return;
+        }
+
         success(token, userId, userLevel, expiryDate);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(error);
@@ -110,11 +115,16 @@ static NSString* const PlaylistPath = @"playlist/request";
     NSString* requeslURLString = [NSString stringWithFormat:@"%@%@", APIRoot, PlaylistPath];
     [self.httpClient POST:requeslURLString parameters:params success:^(NSURLSessionDataTask *task, NSDictionary* jsonData) {
         if (!jsonData || ![jsonData isKindOfClass:[NSDictionary class]]) {
-            failure([NSError errorWithDomain:IGHKTVErrorDomain code:1 userInfo:nil]);
+            failure([NSError errorWithDomain:IGHKTVErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey: @"Unexpected data returned from HKTV."}]);
             return;
         }
 
         NSString* m3u8 = jsonData[@"m3u8"];
+        if (!m3u8) {
+            failure([NSError errorWithDomain:IGHKTVErrorDomain code:2 userInfo:@{NSLocalizedDescriptionKey: @"Video not found!"}]);
+            return;
+        }
+
         success([NSURL URLWithString:m3u8]);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(error);

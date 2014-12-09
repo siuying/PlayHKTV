@@ -18,26 +18,7 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-
-    self.client = [[IGHKTVClient alloc] initWithUUID:settings.UUIDString];
-    [self.client fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
-        [self.window setPlaylistURL:playlistURL];
-        
-        // cache the URL
-        [settings setLastPlaylistURL:playlistURL];
-
-    } failure:^(NSError *error) {
-        // if we failed to retrieve the playlist...
-        NSLog(@"failed to get token: %@", error);
-        NSURL* playlistURL = [settings lastPlaylistURL];
-        if (playlistURL) {
-            NSLog(@"use cached url: %@", playlistURL);
-            [self.window setPlaylistURL:playlistURL];
-        } else {
-            [[NSAlert alertWithError:error] runModal];
-        }
-    }];
+    [self fetchHKTVVideo];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -49,4 +30,29 @@
     return YES;
 }
 
+-(void) fetchHKTVVideo
+{
+    __weak AppDelegate* delegate = self;
+    NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
+    self.client = [[IGHKTVClient alloc] initWithUUID:settings.UUIDString];
+    [self.client fetchPlaylistWithSuccess:^(NSURL *playlistURL) {
+        [delegate.window setPlaylistURL:playlistURL];
+        
+        // cache the URL
+        [settings setLastPlaylistURL:playlistURL];
+        
+    } failure:^(NSError *error) {
+        // if we failed to retrieve the playlist...
+        NSLog(@"failed to get token: %@", error);
+        NSURL* playlistURL = [settings lastPlaylistURL];
+        if (playlistURL) {
+            NSLog(@"use cached url: %@", playlistURL);
+            [delegate.window setPlaylistURL:playlistURL];
+        } else {
+            [[NSAlert alertWithError:error] runModal];
+        }
+    }];
+}
+
 @end
+
