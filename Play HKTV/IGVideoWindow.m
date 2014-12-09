@@ -21,11 +21,6 @@
     // config view
     self.player = [[VLCMediaPlayer alloc] initWithVideoView:self.videoView];
     self.collectionBehavior = NSWindowCollectionBehaviorFullScreenPrimary;
-    
-    // double click
-    NSClickGestureRecognizer* gesture = [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(doubleClicked:)];
-    gesture.numberOfClicksRequired = 2;
-    [self.videoView addGestureRecognizer:gesture];
 }
 
 -(void) setPlaylistURL:(NSURL*)playlistURL
@@ -40,6 +35,14 @@
 {
     NSLog(@"toggle fullscreen");
     [self toggleFullScreen:sender];
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+    if([theEvent clickCount] == 2)
+    {
+        [self toggleFullScreen:nil];
+    }
 }
 
 @end
