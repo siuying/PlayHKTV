@@ -54,4 +54,19 @@
     }];
 }
 
+- (void)testPrograms {
+    XCTestExpectation *apiRequestComplete = [self expectationWithDescription:@"API Request Complete"];
+    NSDate* lastUpdate = [NSDate dateWithTimeIntervalSince1970:0];
+    [client fetchProgramsWithLastUpdate:lastUpdate perPage:30 offset:0 success:^(NSArray *videos) {
+        [apiRequestComplete fulfill];
+        XCTAssertNotNil(videos);
+    } failure:^(NSError *error) {
+        XCTFail(@"API failed: %@", error);
+        [apiRequestComplete fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:3.0 handler:^(NSError *error) {
+    }];
+}
+
+
 @end

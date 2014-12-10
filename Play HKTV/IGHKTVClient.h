@@ -17,10 +17,16 @@ extern NSString* const IGHKTVErrorDomain;
 
 -(instancetype) initWithUUID:(NSString*)UUIDString;
 
+-(void) fetchTokenWithSuccess:(void(^)(NSString *token, NSString *userId, NSString *userLevel, NSDate *expiry))success
+                      failure:(void(^)(NSError* error))failure;
+
 -(void) fetchPlaylistWithSuccess:(void(^)(NSURL* playlistURL))success
                          failure:(void(^)(NSError* error))failure;
 
--(void) fetchTokenWithSuccess:(void(^)(NSString *token, NSString *userId, NSString *userLevel, NSDate *expiry))success
-                      failure:(void(^)(NSError* error))failure;
+-(void) fetchProgramsWithLastUpdate:(NSDate*)date
+                            perPage:(NSInteger)perPage
+                             offset:(NSUInteger)offset
+                            success:(void(^)(NSArray* programs))success
+                            failure:(void(^)(NSError* error))failure;
 
 @end

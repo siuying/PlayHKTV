@@ -10,6 +10,8 @@
 
 #import <IGDigest/NSString+MD5Digest.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import <Mantle/Mantle.h>
+#import "IGHKTVVideo.h"
 
 NSString* const IGHKTVErrorDomain = @"IGHKTVErrorDomain";
 
@@ -28,6 +30,7 @@ static NSString* const APINetwork = @"fixed"; // 3G/4G/fixed/wifi
 
 static NSString* const TokenPath = @"account/token";
 static NSString* const PlaylistPath = @"playlist/request";
+static NSString* const ProgramURLString = @"http://ott-www.hktvmall.com/api/lists/getProgram";
 
 @interface IGHKTVClient()
 @property (nonatomic, strong) AFHTTPSessionManager* httpClient;
@@ -126,6 +129,37 @@ static NSString* const PlaylistPath = @"playlist/request";
         }
 
         success([NSURL URLWithString:m3u8]);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(error);
+    }];
+}
+
+-(void) fetchProgramsWithLastUpdate:(NSDate*)date
+                            perPage:(NSInteger)perPage
+                             offset:(NSUInteger)offset
+                            success:(void(^)(NSArray* programs))success
+                            failure:(void(^)(NSError* error))failure
+{
+    NSString* lastUpdateString = [@([date timeIntervalSince1970]) description];
+    NSString* perPageString = [@(perPage) description];
+    NSString* offsetString = [@(offset) description];
+    NSUInteger timestamp = [[NSDate date] timeIntervalSince1970];
+    NSString* timestampString = [@(timestamp) description];
+
+    [self.httpClient GET:ProgramURLString parameters:@{@"lim": perPageString, @"ofs": offsetString, @"_": timestampString, @"lut": lastUpdateString} success:^(NSURLSessionDataTask *task, id jsonData) {
+        if (!jsonData || ![jsonData isKindOfClass:[NSDictionary class]]) {
+            failure([NSError errorWithDomain:IGHKTVErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey: @"Unexpected data returned from HKTV."}]);
+            return;
+        }
+        
+        NSError* error;
+        NSArray* videos = [MTLJSONAdapter modelsOfClass:[IGHKTVVideo class] fromJSONArray:jsonData[@"videos"] error:&error];
+        if (error) {
+            failure(error);
+            return;
+        }
+
+        success(videos);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(error);
     }];

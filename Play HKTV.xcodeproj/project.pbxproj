@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		541EFAFA1A3741C800A81513 /* hktvmall.cer in Resources */ = {isa = PBXBuildFile; fileRef = 541EFAF91A3741C800A81513 /* hktvmall.cer */; };
+		54A51AEE1A37DEAB006BF275 /* IGHKTVVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A51AED1A37DEAB006BF275 /* IGHKTVVideo.m */; };
 		54A7AB8F1A1DCDB70055883E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7AB8E1A1DCDB70055883E /* AppDelegate.m */; };
 		54A7AB911A1DCDB70055883E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A7AB901A1DCDB70055883E /* main.m */; };
 		54A7AB931A1DCDB70055883E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54A7AB921A1DCDB70055883E /* Images.xcassets */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		268CD43D07A9DBB7D0743FE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		541EFAF91A3741C800A81513 /* hktvmall.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = hktvmall.cer; sourceTree = "<group>"; };
+		54A51AEC1A37DEAB006BF275 /* IGHKTVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGHKTVVideo.h; sourceTree = "<group>"; };
+		54A51AED1A37DEAB006BF275 /* IGHKTVVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGHKTVVideo.m; sourceTree = "<group>"; };
 		54A7AB881A1DCDB70055883E /* Play HKTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play HKTV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A7AB8C1A1DCDB70055883E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54A7AB8D1A1DCDB70055883E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				54A7ABC01A1DDDC80055883E /* NSUserDefaults+IGSettings.m */,
 				54A7ABB01A1DCE270055883E /* IGHKTVClient.h */,
 				54A7ABB11A1DCE270055883E /* IGHKTVClient.m */,
+				54A51AEC1A37DEAB006BF275 /* IGHKTVVideo.h */,
+				54A51AED1A37DEAB006BF275 /* IGHKTVVideo.m */,
 				54A7ABB71A1DD43B0055883E /* IGVideoWindow.h */,
 				54A7ABB81A1DD43B0055883E /* IGVideoWindow.m */,
 				54A7AB8D1A1DCDB70055883E /* AppDelegate.h */,
@@ -314,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A51AEE1A37DEAB006BF275 /* IGHKTVVideo.m in Sources */,
 				54A7ABC11A1DDDC80055883E /* NSUserDefaults+IGSettings.m in Sources */,
 				54A7AB911A1DCDB70055883E /* main.m in Sources */,
 				54A7AB8F1A1DCDB70055883E /* AppDelegate.m in Sources */,
