@@ -12,12 +12,18 @@
 #import "IGVideoWindow.h"
 #import "NSUserDefaults+IGSettings.h"
 
+#define IsTestTarget() ([[[NSProcessInfo processInfo] environment] objectForKey:@"XCInjectBundle"])
+
 @interface AppDelegate ()
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    if (IsTestTarget()) {
+        return;
+    }
+
     [self fetchHKTVVideo];
 }
 
