@@ -18,13 +18,18 @@ PODS:
   - AFNetworking/Security (2.5.0)
   - AFNetworking/Serialization (2.5.0)
   - IGDigest (1.1.2)
+  - Mantle (1.5.1):
+    - Mantle/extobjc
+  - Mantle/extobjc (1.5.1)
 
 DEPENDENCIES:
   - AFNetworking
   - IGDigest
+  - Mantle
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   IGDigest: b9ff1800bf1f0bdc3714fb4f0f63904464b2ddb4
+  Mantle: d7c5ac734579ec751c58fecbf56189853056c58c
 
 COCOAPODS: 0.34.4
